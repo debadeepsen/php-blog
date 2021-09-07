@@ -6,6 +6,9 @@ require_once("./helpers/dbhelper.php");
 // default title
 $title = CAPTION;
 
+// for prefetching article links
+$prefetched_links = "";
+
 // check if it has a slug
 $slug = get_slug();
 if ($slug) {
@@ -18,8 +21,7 @@ if ($slug) {
     } else if ($slug == "about/privacy") {
         $title = "Privacy Policy | " . CAPTION;
         $page = "./views/privacy.php";
-    }
-    else {
+    } else {
         // we will show the article page
         $article = get_article($slug);
         $title = $article["title"];
@@ -30,7 +32,9 @@ if ($slug) {
 } else {
     // we will show the list of articles
     $article_list = get_article_list();
-
+    foreach ($article_list as $value) {
+        $prefetched_links .= "<link rel='prerender' href='" . BASE . $value['url'] . "'>\n\t";
+    }
     $page = "./views/main.php";
 }
 ?>
@@ -42,6 +46,7 @@ if ($slug) {
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <?php echo $prefetched_links ?>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Caveat&family=Rock+Salt&family=Roboto+Slab&display=swap" rel="stylesheet">
     <link href="<?php echo BASE ?>main.css" rel="stylesheet" />
     <title><?php __($title) ?></title>

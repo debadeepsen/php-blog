@@ -48,3 +48,9 @@ function get_slug()
 
     return "";
 }
+
+
+function prt($obj)
+{
+    echo '<pre>' . print_r($obj, true) . '</pre>';
+}
