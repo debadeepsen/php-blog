@@ -10,7 +10,8 @@ function mysqli_object()
     return $mysqli;
 }
 
-function __($obj) {
+function __($obj)
+{
     echo $obj;
 }
 
@@ -24,7 +25,7 @@ function query_result($query)
 {
     $mysqli = mysqli_object();
     if ($mysqli->connect_errno) {
-        return(["error" => "Failed to connect to MySQL: " . $mysqli->connect_error]);
+        return (["error" => "Failed to connect to MySQL: " . $mysqli->connect_error]);
     }
 
     $sql = $query;
@@ -40,7 +41,10 @@ function query_result($query)
 
 function get_slug()
 {
-    if (array_key_exists("path", $_GET))
-        return $_GET["path"];
+    if (array_key_exists("path", $_GET)) {
+        $path = $_GET["path"];
+        return $path;
+    }
+
     return "";
 }

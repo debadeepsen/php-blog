@@ -6,7 +6,8 @@
                 $a_title = $a["title"];
                 $a_subtitle = $a["subtitle"];
                 $a_link = $a["url"];
-                $a_img = $a["main_image"];
+                $full_img = $a["main_image"];
+                $a_img = explode(".webp", $full_img)[0] . "-t.webp";
 
                 $tags = explode(",", $a["tag_list"]);
                 $a_tags = "";
@@ -16,7 +17,7 @@
 
 
                 __("<a href='$a_link'>
-                    <img src='$a_img' />
+                    <img src='$a_img' class='img-cover' width='100%' height='180' />
                     <div class='text'>
                         <h5>$a_title</h5>
                         <h6>$a_subtitle</h6>

@@ -1,7 +1,7 @@
 <div class="article-container">
     <img src="<?php __($article_image) ?>" />
     <h1>
-        <?php __($article_title); ?>
+        <?php __($title); ?>
     </h1>
     <div style="margin-top: 6px; margin-bottom: 6px">
         <?php
