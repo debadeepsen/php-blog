@@ -14,7 +14,7 @@ $prefetched_links = '';
 // check if it has a slug
 $slug = get_slug();
 if ($slug) {
-    if ($slug == 'about') {
+    elseif ($slug == 'about') {
         $title = 'About | ' . CAPTION;
         $page = './views/about.php';
     } elseif ($slug == 'about/terms') {
@@ -47,6 +47,7 @@ if ($slug) {
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <?php echo $prefetched_links; ?>
