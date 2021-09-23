@@ -2,7 +2,7 @@
 
 function mysqli_object()
 {
-    $mysqli = new mysqli("localhost:3306", "root", "", "nerdtown_blog_live");
+    $mysqli = new mysqli("localhost:3306", "root", "", "blogdb");
 
     // this is done to be able to store 
     // unicode utf8 properly

@@ -10,6 +10,10 @@ body {
     color: #455;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h1, h2, h3 {
@@ -47,10 +51,6 @@ footer {
     text-align: right;
     padding: 30px 20px;
     box-shadow: 0px -1px 2px #3333;
-}
-
-.header {
-    text-align: center;
 }
 
 .main-menu {
@@ -127,7 +127,8 @@ footer {
     margin: 0;
 }
 
-.header {
+header {
+    text-align: center;
     cursor: pointer;
     background-color: #fff;
     background-image: url(./assets/images/pexels-ylanite-koppens-934062.webp);
@@ -137,11 +138,11 @@ footer {
     padding-bottom: 5px;
 }
 
-.header > a {
+header > a {
     color: unset;
 }
 
-.header h1 {
+header h1 {
     margin: 0;
     color: inherit;
     font-family: 'Rock Salt', serif;
@@ -149,22 +150,26 @@ footer {
     filter: blur(0.6px);
 }
 
-.header h3 {
+header h3 {
     margin-top: 3px;
     margin-bottom: 12px;
     color: #888;
     font-family: 'Caveat', serif;
 }
 
-.main-container {
+main {
     width: 80vw;
     margin: 10px auto;
 }
 
-.article-container, .legal {
+article, .legal {
     background-color: #fff;
     padding: 20px 30px;
     box-shadow: 4px 4px 12px var(--m-grey);
+}
+
+article h2 {
+    font-size: 2rem;
 }
 
 .tag {

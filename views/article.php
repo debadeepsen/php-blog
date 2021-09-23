@@ -1,18 +1,18 @@
-<div class="article-container">
-    <img src="<?php __($article_image) ?>" />
-    <h1>
+<article>
+    <img src="<?php __($article_image) ?>" alt="Main article image" />
+    <h2>
         <?php __($title); ?>
-    </h1>
+    </h2>
     <div style="margin-top: 6px; margin-bottom: 6px">
         <?php
-        $tags = explode(",", $article["tag_list"]);
-        $a_tags = "";
-        foreach ($tags as $tag) {
-            __("<span class='tag'>$tag</span>");
-        }
+            $tags = explode(",", $article["tag_list"]);
+            $a_tags = "";
+            foreach ($tags as $tag) {
+                __("<span class='tag'>$tag</span>");
+            }
         ?>
     </div>
     <div>
         <?php __($article_body); ?>
     </div>
-</div>
+</article>
