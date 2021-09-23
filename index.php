@@ -13,8 +13,9 @@ $prefetched_links = '';
 
 // check if it has a slug
 $slug = get_slug();
+
 if ($slug) {
-    elseif ($slug == 'about') {
+    if ($slug == 'about') {
         $title = 'About | ' . CAPTION;
         $page = './views/about.php';
     } elseif ($slug == 'about/terms') {

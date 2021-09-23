@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('START')) {
+    die;
+}
+
 // const BASE = "//messygeek.com/";
 const BASE = "http://phpblog/";
 const CAPTION = "The Messy Geek";

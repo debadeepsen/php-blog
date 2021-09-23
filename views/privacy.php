@@ -1,3 +1,7 @@
+<?php if (!defined('START')) {
+    die();
+}
+?>
 <div class="legal">
 	<h1>Welcome to our Privacy Policy</h1>
 	<h3>Your privacy is critically important to us.</h3>

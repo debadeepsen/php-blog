@@ -1,3 +1,7 @@
+<?php if (!defined('START')) {
+    die();
+}
+?>
 <div class="legal">
 	<h2>Welcome to The Messy Geek</h2>
 		<p>These terms and conditions outline the rules and regulations for the use of The Messy Geek's Website.</p> <br> 

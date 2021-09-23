@@ -1,3 +1,7 @@
+<?php if (!defined('START')) {
+    die();
+}
+?>
 <footer>
     © <?php echo date('Y') ?> The Messy Geek. All rights reserved.
     &nbsp;

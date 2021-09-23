@@ -1,5 +1,9 @@
 <?php
 
+if (!defined('START')) {
+    die;
+}
+
 require_once("./helpers/helper.php");
 
 function get_article_list($all = false, $start = 0, $limit = 0)

@@ -1,3 +1,7 @@
+<?php if (!defined('START')) {
+    die();
+}
+?>
 <header>
     <a href="<?php echo BASE ?>">
         <h1>The Messy Geek</h1>

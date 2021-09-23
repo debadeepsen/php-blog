@@ -1,3 +1,7 @@
+<?php if (!defined('START')) {
+    die();
+}
+?>
 <nav class="main-menu">
     <?php foreach ($article_list as $a) {
         $a_title = $a['title'];

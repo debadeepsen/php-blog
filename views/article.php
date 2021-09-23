@@ -1,3 +1,8 @@
+
+<?php if (!defined('START')) {
+    die();
+}
+?>
 <article>
     <img src="<?php __($article_image) ?>" alt="Main article image" />
     <h2>
